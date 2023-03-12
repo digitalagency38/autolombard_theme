@@ -28,12 +28,12 @@
 			<?php $list2 = ($block_services['pref']); ?>
 			<?php if (is_array($list2)) {
 				foreach ($list2 as $e) { ?>
-					<div class="block_services__block">
+					<a href="<?php echo $e['link']; ?>" class="block_services__block">
 						<div class="block_services__tit"><?php echo $e['title']; ?></div>
 						<div class="block_services__img">
 							<img src="<?php echo $e['img']; ?>" alt="">
 						</div>
-					</div>
+					</a>
 				<?php } ?>
 			<?php } ?>
             <div class="block_services__form">
@@ -72,7 +72,7 @@
                             </a>
                         </div>
                         <div class="block_services__btn">
-                            <a href="<?php echo $block_services['link3']; ?>">Позвонить нам</a>
+                            <div data-modal-id="3">Позвонить нам</div>
                         </div>
                     </div>
                 </div>
@@ -100,6 +100,17 @@
 				<div id="map"></div>
             </div>
         </div>
+    </div>
+</div>
+<div class="modal" data-modal="3">
+    <div class="modal__in">
+        <div class="modal__closer"></div>
+		<div class="modal__title">Подать документы на оформление <span>займа</span> под <span>залог авто</span></div>
+		<?php echo do_shortcode('[contact-form-7 id="872" title="Форма на странице правил"]')?>
+		<div class="modal-body isSent">
+			<h2><span>Спасибо</span>, <br> ваша заявка получена.</h2>
+			<p>Мы свяжемся с вами в рабочее время</p>
+		</div>
     </div>
 </div>
 <?php

@@ -24,11 +24,15 @@ $link_tg = get_option('link_tg');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
-    <link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/dist/css/style.css?_v=20230303214427">
-    <link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/css/dop_style.css?_v=20230303214427">
-    <link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/css/responsive-tabs.css?_v=20230303214427">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/dist/css/style.css">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/css/jquery-ui.css">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/css/dop_style.css">
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/css/responsive-tabs.css">
 	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="<?php echo get_theme_file_uri(); ?>/js/jquery.min.js"></script>
+	<script src="<?php echo get_theme_file_uri(); ?>/js/jquery-ui.min.js"></script>
+	<script src="<?php echo get_theme_file_uri(); ?>/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="<?php echo get_theme_file_uri(); ?>/js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript">
 	// Группы объектов
 		var groups = [
@@ -81,6 +85,7 @@ $link_tg = get_option('link_tg');
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         <header class="header">
+    <div class="center_block">
     <div class="header__top">
         <a href="/" class="header__logo">
           <?php
@@ -200,6 +205,7 @@ $link_tg = get_option('link_tg');
                 )
             );
         ?>
+    </div>
     </div>
 </header>
         <div class="content">

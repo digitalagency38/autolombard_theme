@@ -19,7 +19,8 @@ $copy = get_option('copy');
 $politic = get_option('politic');
 ?>
  </div>
-        <footer class="footer">
+<footer class="footer">
+	<div class="center_block">
     <div class="footer__text"><?= $footer_text; ?></div>
     <div class="footer__item">
         <div class="footer__main">
@@ -96,7 +97,7 @@ $politic = get_option('politic');
                 </a>
             </div>
             <div class="footer__btn">
-                <a href="#">Позвонить нам</a>
+                <div data-modal-id="2">Позвонить нам</div>
             </div>
         </div>
     </div>
@@ -132,10 +133,23 @@ $politic = get_option('politic');
             </svg>
         </a>
     </div>
+    </div>
 </footer>
     </div>
     <script src="<?php echo get_theme_file_uri(); ?>/dist/js/app.min.js?_v=20230303214427"></script>
     <script src="<?php echo get_theme_file_uri(); ?>/js/jquery.responsiveTabs.min.js?_v=20230303214427"></script>
     <script src="<?php echo get_theme_file_uri(); ?>/js/main_dop.js?_v=20230303214427"></script>
+<div class="modal" data-modal="2">
+    <div class="modal__in">
+        <div class="modal__closer"></div>
+		<div class="modal__title">Подать документы на оформление <span>займа</span> под <span>залог авто</span></div>
+		<?php echo do_shortcode('[contact-form-7 id="869" title="Форма в подвале"]')?>
+		<div class="modal-body isSent">
+			<h2><span>Спасибо</span>, <br> ваша заявка получена.</h2>
+			<p>Мы свяжемся с вами в рабочее время</p>
+		</div>
+    </div>
+</div>
+ <?php wp_footer();?>
 </body>
 </html>

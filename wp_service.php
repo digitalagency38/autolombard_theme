@@ -37,6 +37,80 @@
       <img src="<?php echo $block_main['img']; ?>" alt="">
     </div>
 </div>
+	<div class="block_calc">
+		<div class="block_calc__item">
+			<div class="block_calc__title"></div>
+			<div class="block_calc__block">
+				<div class="calc__wrap calc_pts">
+					<div class="calc_borrow_step_1">
+						<h2>Рассчитайте ежемесячный платёж</h2>
+						<div class="calc_items">
+							<div class="calc_item">
+								<div class="calc_item_wrap">
+									<div class="calc_left">
+										<label class="calc_label">Сумма займа</label>
+									</div>
+									<div class="calc_right">
+										<input type="text" id="amount_cash-pts" class="calc_input js-input-only-numbers js-q-price-range-value-pts">
+										<div class="calc_right_absolute">
+											<div class="calc_currency">рублей</div>
+										</div>
+									</div>
+								</div>
+								<div id="cash-pts" class="calc_range"></div>
+								<div class="calc_values">
+									<span class="calc_value">50 тыс.</span>
+									<span class="calc_value mobs">5 млн</span>
+									<span class="calc_value mobs">10 млн</span>
+									<span class="calc_value">15 млн</span>
+									<span class="calc_value">20 млн</span>
+								</div>
+							</div>
+							<div class="calc_item">
+								<div class="calc_item_wrap">
+									<div class="calc_left">
+										<label class="calc_label">Срок займа</label>
+									</div>
+									<div class="calc_right">
+										<input type="text" id="amount_time-pts" class="calc_input js-input-only-numbers js-q-days-range-value-pts">
+										<div class="calc_right_absolute">
+											<div class="calc_textday b-calc-param__textday-pts">месяца</div>
+<!-- 											<span class="calc_last_day">до <span class="js-last-payment-day"></span></span> -->
+										</div>
+									</div>
+								</div>
+								<div id="time-pts" class="calc_range"></div>
+								<div class="calc_values">
+									<span class="calc_value">2 мес</span>
+									<span class="calc_value mobs">12 мес</span>
+									<span class="calc_value">18 мес</span>
+									<span class="calc_value mobs">24 мес</span>
+									<span class="calc_value">36 мес</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="calc_bottom">
+						<div class="calc_total">
+							<div class="calc_bottom__title">Наше предложение</div>
+							<div class="calc_total_col">
+								<div class="calc_total_title h4">Ежемесячный платёж</div>
+								<div class="calc_total_text"><span id="month-pts">1</span>&nbsp;руб.</div>
+							</div>
+							<div class="calc_total_col">
+								<div class="calc_total_title h4">Процентная ставка</div>
+								<div class="calc_total_text"><span id="total-final-pts"></span><span class="js-days-percents-pts"></span></div>
+							</div>
+						</div>
+						<div class="calc_form">
+							<div class="calc_bottom__title">Оставляйте заявку на займ</div>
+							<?php echo do_shortcode('[contact-form-7 id="741" title="Форма с телефоном для калькулятора"]')?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<?php $block_info = get_field( 'block_info' );?>
     <div class="block_info">
       <div class="block_info__title"><?php echo $block_info['title']; ?></div>
@@ -108,14 +182,14 @@
       <div class="block_prefs__item">
           <div class="block_prefs__l-side">
               <div class="block_prefs__text"><?php echo $block_prefs['text']; ?></div>
-              <a href="<?php echo $block_prefs['link']; ?>" class="block_prefs__btn">Получить займ</a>
+              <div data-modal-id="4" class="block_prefs__btn">Получить займ</div>
           </div>
           <div class="block_prefs__r-side"><?php echo $block_prefs['list']; ?>
               <div class="block_prefs__info">
                   <?php echo $block_prefs['info']; ?>
               </div>
           </div>
-          <a href="<?php echo $block_prefs['link']; ?>" class="block_prefs__btn mob">Получить займ</a>
+          <div data-modal-id="4" class="block_prefs__btn mob">Получить займ</div>
       </div>
   </div>
 </div>
@@ -132,34 +206,36 @@
     </div>
 </div>
 <div class="center_block">
-  <?php $block_time = get_field( 'block_time' );?>
-      <div class="block_time">
-          <div class="block_time__item">
-              <div class="block_time__top">
-                  <div class="block_time__l-side">
-                      <div class="block_time__title"><?php echo $block_time['title']; ?></div>
-                      <div class="block_time__text"><?php echo $block_time['text']; ?></div>
-                      <a href="<?php echo $block_time['link']; ?>" class="block_time__link">Подать документы</a>
-                  </div>
-                  <div class="block_time__r-side">
-                      <div class="block_time__img">
-                          <img src="<?php echo $block_time['img']; ?>" alt="">
-                      </div>
-                  </div>
-              </div>
-              <div class="block_time__blocks">
-                  <?php $list4 = ($block_time['pref']); ?>
-                  <?php if (is_array($list4)) {
-                      foreach ($list4 as $e) { ?>
-                          <div class="block_time__block">
-                              <div class="block_time__tit"><?php echo $e['title']; ?></div>
-                              <div class="block_time__txt"><?php echo $e['text']; ?></div>
-                          </div>
-                      <?php } ?>
-                  <?php } ?>
-              </div>
-          </div>
-      </div>
+<?php $block_time = get_field( 'block_time' );?>
+	<div class="block_time">
+		<div class="block_time__item">
+			<div class="block_time__top">
+				<div class="block_time__l-side">
+					<div class="block_time__title"><?php echo $block_time['title']; ?></div>
+					<div class="block_time__text"><?php echo $block_time['text']; ?></div>
+					<div data-modal-id="4" class="block_time__link">Подать документы</div>
+				</div>
+				<div class="block_time__r-side">
+					<div class="times_block">
+						<div class="times_block__logo"><img src="<?php echo $block_time['img']; ?>" alt=""></div>
+						<div class="times_block__text">Онлайн оформление</div>
+						<div data-modal-id="4" class="times_block__button">Оформить</div>
+					</div>
+				</div>
+			</div>
+			<div class="block_time__blocks">
+				<?php $list4 = ($block_time['pref']); ?>
+				<?php if (is_array($list4)) {
+					foreach ($list4 as $e) { ?>
+						<div class="block_time__block">
+							<div class="block_time__tit"><?php echo $e['title']; ?></div>
+							<div class="block_time__txt"><?php echo $e['text']; ?></div>
+						</div>
+					<?php } ?>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
 </div>
 <?php $block_auto = get_field( 'block_auto' );?>
 <div class="block_auto">
@@ -199,20 +275,24 @@
 <?php $block_partners = get_field( 'block_partners' );?>
 <div class="block_partners">
     <div class="block_partners__title center_block"><?php echo $block_partners['title']; ?></div>
-    <div class="block_partners__items">
-        <div class="block_partners__item">
-            <div class="block_partners__blocks center_block">
-				<?php $list7 = ($block_partners['pref']); ?>
-				<?php if (is_array($list7)) {
-					foreach ($list7 as $e) { ?>
+	<div class="block_partners__items">
+		<div class="center_block">
+			<div class="glide part-glide-js">
+				<div data-glide-el="track" class="glide__track">
+					<div class="block_partners__blocks">
+						<?php $list7 = ($block_partners['pref']); ?>
+						<?php if (is_array($list7)) {
+		foreach ($list7 as $e) { ?>
 						<div class="block_partners__block">
 							<img src="<?php echo $e['img']; ?>" alt="">
 						</div>
-					<?php } ?>
-				<?php } ?>
-            </div>
-        </div>
-    </div>
+						<?php } ?>
+						<?php } ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <?php $block_reviews = get_field( 'block_reviews' );?>
 <div class="block_reviews">
@@ -321,6 +401,17 @@
 				<div id="map"></div>
             </div>
         </div>
+    </div>
+</div>
+<div class="modal" data-modal="4">
+    <div class="modal__in">
+        <div class="modal__closer"></div>
+		<div class="modal__title">Подать документы на оформление <span>займа</span> под <span>залог авто</span></div>
+		<?php echo do_shortcode('[contact-form-7 id="873" title="Форма на странице сервиса"]')?>
+		<div class="modal-body isSent">
+			<h2><span>Спасибо</span>, <br> ваша заявка получена.</h2>
+			<p>Мы свяжемся с вами в рабочее время</p>
+		</div>
     </div>
 </div>
 <?php
