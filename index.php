@@ -33,7 +33,21 @@ get_header();
 				<?php } ?>
 			</div>
 			<div class="block_main__form">
-				<?php echo do_shortcode('[contact-form-7 id="8" title="Форма с телефоном"]')?>
+				<form action="/callback/" method="POST" name="">
+					<input type="hidden" name="subject" value="Отправить заявку">
+					<input class="feedback__input" type="tel" placeholder="+7 (___) ___-__-__" name="tel" required="required"> 
+					<input id="check-34" name="check" type="hidden" value="" />
+					<input class="global_btn feedback__submit js_submit" type="submit" value="Отправить заявку" onclick="document.getElementById('check-34').value = 'stopSpam';">
+					<input type="hidden" name="UTM_SOURCE" value="">
+					<input type="hidden" name="UTM_MEDIUM" value="">
+					<input type="hidden" name="UTM_CAMPAIGN" value="">
+					<input type="hidden" name="UTM_TERM" value="">
+					<input type="hidden" name="UTM_CONTENT" value="">
+					<input type="hidden" name="affiliate_id">
+					<input type="hidden" name="source">
+					<input type="hidden" name="transaction_id">
+					<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
+				</form>
 			</div>
 		</div>
 		<div class="block_main__r-side">
@@ -101,13 +115,28 @@ get_header();
 								<div class="calc_total_text"><span id="month-pts">1</span>&nbsp;руб.</div>
 							</div>
 							<div class="calc_total_col">
-								<div class="calc_total_title h4">Процентная ставка</div>
-								<div class="calc_total_text"><span id="total-final-pts"></span><span class="js-days-percents-pts"></span></div>
+								<div class="calc_total_title h4">Процентная ставка*</div>
+								<div class="calc_total_text">от <span id="total-final-pts"></span><span class="js-days-percents-pts"></span></div>
 							</div>
+							<div class="calc_total__txt">*процентная ставка рассчитывается индивидуально</div>
 						</div>
 						<div class="calc_form">
 							<div class="calc_bottom__title">Оставляйте заявку на займ</div>
-							<?php echo do_shortcode('[contact-form-7 id="741" title="Форма с телефоном для калькулятора"]')?>
+							<form class="feedback__form" action="/callback/" method="POST" name="">
+								<input type="hidden" name="subject" value="Оставляйте заявку на займ">
+								<input class="feedback__input" type="tel" placeholder="+7 (___) ___-__-__" name="tel" required="required">
+								<input id="check-60" name="check" type="hidden" value="" />
+								<input class="global_btn feedback__submit js_submit" type="submit" value="Получить займ" onclick="document.getElementById('check-60').value = 'stopSpam';">
+								<input type="hidden" name="UTM_SOURCE" value="">
+								<input type="hidden" name="UTM_MEDIUM" value="">
+								<input type="hidden" name="UTM_CAMPAIGN" value="">
+								<input type="hidden" name="UTM_TERM" value="">
+								<input type="hidden" name="UTM_CONTENT" value="">
+								<input type="hidden" name="affiliate_id">
+								<input type="hidden" name="source">
+								<input type="hidden" name="transaction_id">
+								<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -211,7 +240,21 @@ get_header();
                     </div>
                 </div>
                 <div class="block_services__r-side">
-					<?php echo do_shortcode('[contact-form-7 id="137" title="Форма с телефоном кнопка Получить займ"]')?>
+                    <form class="feedback__form" action="/callback/" method="POST" name="">
+						<input type="hidden" name="subject" value="Получить займ">
+						<input class="feedback__input" type="tel" placeholder="+7 (___) ___-__-__" name="tel" required="required">
+						<input id="check-35" name="check" type="hidden" value="" />
+                        <input class="global_btn feedback__submit js_submit" type="submit" value="Получить займ" onclick="document.getElementById('check-35').value = 'stopSpam';">
+						<input type="hidden" name="UTM_SOURCE" value="">
+						<input type="hidden" name="UTM_MEDIUM" value="">
+						<input type="hidden" name="UTM_CAMPAIGN" value="">
+						<input type="hidden" name="UTM_TERM" value="">
+						<input type="hidden" name="UTM_CONTENT" value="">
+						<input type="hidden" name="affiliate_id">
+						<input type="hidden" name="source">
+						<input type="hidden" name="transaction_id">
+						<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -328,8 +371,22 @@ get_header();
 <?php $block_form = get_field( 'block_form' );?>
 <div class="block_form center_block">
     <div class="block_form__l-side">
-        <div class="block_form__title"><?php echo $block_form['title']; ?></div>
-		<?php echo do_shortcode('[contact-form-7 id="137" title="Форма с телефоном кнопка Получить займ"]')?>
+        <div class="block_form__title"><?php echo $block_form['title']; ?></div>        
+		<form class="feedback__form" action="/callback/" method="POST" name="">
+			<input type="hidden" name="subject" value="Получить займ">
+			<input class="feedback__input" type="tel" placeholder="+7 (___) ___-__-__" name="tel" required="required">
+			<input id="check-351" name="check" type="hidden" value="" />
+			<input class="global_btn feedback__submit js_submit" type="submit" value="Получить займ" onclick="document.getElementById('check-351').value = 'stopSpam';">
+			<input type="hidden" name="UTM_SOURCE" value="">
+			<input type="hidden" name="UTM_MEDIUM" value="">
+			<input type="hidden" name="UTM_CAMPAIGN" value="">
+			<input type="hidden" name="UTM_TERM" value="">
+			<input type="hidden" name="UTM_CONTENT" value="">
+			<input type="hidden" name="affiliate_id">
+			<input type="hidden" name="source">
+			<input type="hidden" name="transaction_id">
+			<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
+		</form>
     </div>
     <div class="block_form__r-side">
         <img src="<?php echo $block_form['img']; ?>" alt="">
@@ -510,12 +567,26 @@ get_header();
 <div class="modal" data-modal="1">
     <div class="modal__in">
         <div class="modal__closer"></div>
-		<div class="modal__title">Подать документы на оформление <span>займа</span> под <span>залог авто</span></div>
-		<?php echo do_shortcode('[contact-form-7 id="870" title="Форма на главной"]')?>
-		<div class="modal-body isSent">
-			<h2><span>Спасибо</span>, <br> ваша заявка получена.</h2>
-			<p>Мы свяжемся с вами в рабочее время</p>
-		</div>
+		<form class="feedback__form" action="/callback/" method="POST" name="">
+			<div class="modal__title">Подать документы на оформление <span>займа</span> под <span>залог авто</span></div>
+			<input type="hidden" name="subject" value="Получить займ">
+			<input class="feedback__input" type="name" placeholder="Ваше имя" name="name" required="required">
+			<input class="feedback__input" type="tel" placeholder="+7 (___) ___-__-__" name="tel" required="required">
+			<input id="check-36" name="check" type="hidden" value="" />
+			<input class="global_btn feedback__submit js_submit" type="submit" onclick="document.getElementById('check-36').value = 'stopSpam';" value="Получить займ">
+			<input type="hidden" name="UTM_SOURCE" value="">
+			<input type="hidden" name="UTM_MEDIUM" value="">
+			<input type="hidden" name="UTM_CAMPAIGN" value="">
+			<input type="hidden" name="UTM_TERM" value="">
+			<input type="hidden" name="UTM_CONTENT" value="">
+			<input type="hidden" name="affiliate_id">
+			<input type="hidden" name="source">
+			<input type="hidden" name="transaction_id">
+			<div class="modal-body isSent">
+				<h2><span>Спасибо</span>, <br> ваша заявка получена.</h2>
+				<p>Мы свяжемся с вами в рабочее время</p>
+			</div>
+		</form>
     </div>
 </div>
 <?php

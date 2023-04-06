@@ -1,0 +1,72 @@
+Заявка: 15.03.2023 -  08:04:13
+Телефон: 77777777777 ; Имя: 
+Ссылка:
+http://159.255.26.150/xlombard/handlers/requests.ashx?operation=add&token=7f6d02cd-e3b0-4c27-9538-f60d604596ee
+Передаваемые данные:
+{"FilialId":1,"DealTypeId":600,"ClientPhone":"77777777777","Utm_source":"null","Utm_medium":"null","Utm_campaign":"null","Utm_term":"null","Utm_content":"null","Utm_device_type":"null","Utm_position_type":"null","Utm_region_name":"null","RefUrl":"https:\/\/ca60113-wordpress-jxdvd.tw1.ru\/","AdvertClientId_1":"null","AdvertClientId_2":"null","Fields":[{"Key":"Телефон","Value":"77777777777"}],"Source":"topmca.ru","SessionId":"null"}
+Результат: {"state":"1", "error":"", "data":"134050"} 
+
+
+Заявка: 15.03.2023 -  08:04:47
+Телефон: 77777777777 ; Имя: 
+Ссылка:
+http://159.255.26.150/xlombard/handlers/requests.ashx?operation=add&token=7f6d02cd-e3b0-4c27-9538-f60d604596ee
+Передаваемые данные:
+{"FilialId":1,"DealTypeId":600,"ClientPhone":"77777777777","Utm_source":"null","Utm_medium":"null","Utm_campaign":"null","Utm_term":"null","Utm_content":"null","Utm_device_type":"null","Utm_position_type":"null","Utm_region_name":"null","RefUrl":"https:\/\/ca60113-wordpress-jxdvd.tw1.ru\/","AdvertClientId_1":"null","AdvertClientId_2":"null","Fields":[{"Key":"Телефон","Value":"77777777777"}],"Source":"topmca.ru","SessionId":"null"}
+Результат: {"state":"1", "error":"", "data":"134051"} 
+
+
+Заявка: 15.03.2023 -  08:05:36
+Телефон: 77777777777 ; Имя: 
+Ссылка:
+http://159.255.26.150/xlombard/handlers/requests.ashx?operation=add&token=7f6d02cd-e3b0-4c27-9538-f60d604596ee
+Передаваемые данные:
+{"FilialId":1,"DealTypeId":600,"ClientPhone":"77777777777","Utm_source":"null","Utm_medium":"null","Utm_campaign":"null","Utm_term":"null","Utm_content":"null","Utm_device_type":"null","Utm_position_type":"null","Utm_region_name":"null","RefUrl":"https:\/\/ca60113-wordpress-jxdvd.tw1.ru\/","AdvertClientId_1":"null","AdvertClientId_2":"null","Fields":[{"Key":"Телефон","Value":"77777777777"}],"Source":"topmca.ru","SessionId":"null"}
+Результат: {"state":"1", "error":"", "data":"134052"} 
+
+
+Заявка: 15.03.2023 -  08:10:37
+Телефон: 77777777777 ; Имя: 
+Ссылка:
+http://159.255.26.150/xlombard/handlers/requests.ashx?operation=add&token=7f6d02cd-e3b0-4c27-9538-f60d604596ee
+Передаваемые данные:
+{"FilialId":1,"DealTypeId":600,"ClientPhone":"77777777777","Utm_source":"null","Utm_medium":"null","Utm_campaign":"null","Utm_term":"null","Utm_content":"null","Utm_device_type":"null","Utm_position_type":"null","Utm_region_name":"null","RefUrl":"https:\/\/ca60113-wordpress-jxdvd.tw1.ru\/","AdvertClientId_1":"null","AdvertClientId_2":"null","Fields":[{"Key":"Телефон","Value":"77777777777"}],"Source":"topmca.ru","SessionId":"null"}
+Результат: {"state":"1", "error":"", "data":"134053"} 
+
+
+Заявка: 15.03.2023 -  08:11:55
+Телефон: 77777777777 ; Имя: 
+Ссылка:
+http://159.255.26.150/xlombard/handlers/requests.ashx?operation=add&token=7f6d02cd-e3b0-4c27-9538-f60d604596ee
+Передаваемые данные:
+{"FilialId":1,"DealTypeId":600,"ClientPhone":"77777777777","Utm_source":"null","Utm_medium":"null","Utm_campaign":"null","Utm_term":"null","Utm_content":"null","Utm_device_type":"null","Utm_position_type":"null","Utm_region_name":"null","RefUrl":"https:\/\/ca60113-wordpress-jxdvd.tw1.ru\/","AdvertClientId_1":"null","AdvertClientId_2":"null","Fields":[{"Key":"Телефон","Value":"77777777777"}],"Source":"topmca.ru","SessionId":"null"}
+Результат: {"state":"1", "error":"", "data":"134054"} 
+
+
+Заявка: 15.03.2023 -  08:19:27
+Телефон: 77777777777 ; Имя: 
+Ссылка:
+http://159.255.26.150/xlombard/handlers/requests.ashx?operation=add&token=7f6d02cd-e3b0-4c27-9538-f60d604596ee
+Передаваемые данные:
+{"FilialId":1,"DealTypeId":600,"ClientPhone":"77777777777","Utm_source":"null","Utm_medium":"null","Utm_campaign":"null","Utm_term":"null","Utm_content":"null","Utm_device_type":"null","Utm_position_type":"null","Utm_region_name":"null","RefUrl":"https:\/\/ca60113-wordpress-jxdvd.tw1.ru\/","AdvertClientId_1":"null","AdvertClientId_2":"null","Fields":[{"Key":"Телефон","Value":"77777777777"}],"Source":"topmca.ru","SessionId":"null"}
+Результат: {"state":"1", "error":"", "data":"134055"} 
+
+
+Заявка: 15.03.2023 -  08:20:21
+Телефон: 77777777777 ; Имя: Тест
+Ссылка:
+http://159.255.26.150/xlombard/handlers/requests.ashx?operation=add&token=7f6d02cd-e3b0-4c27-9538-f60d604596ee
+Передаваемые данные:
+{"FilialId":1,"DealTypeId":600,"ClientPhone":"77777777777","Utm_source":"null","Utm_medium":"null","Utm_campaign":"null","Utm_term":"null","Utm_content":"null","Utm_device_type":"null","Utm_position_type":"null","Utm_region_name":"null","RefUrl":"https:\/\/ca60113-wordpress-jxdvd.tw1.ru\/","AdvertClientId_1":"null","AdvertClientId_2":"null","Fields":[{"Key":"Телефон","Value":"77777777777"}],"Source":"topmca.ru","SessionId":"null"}
+Результат: {"state":"1", "error":"", "data":"134056"} 
+
+
+Заявка: 15.03.2023 -  08:22:12
+Телефон: 76666666666 ; Имя: Тест
+Ссылка:
+http://159.255.26.150/xlombard/handlers/requests.ashx?operation=add&token=7f6d02cd-e3b0-4c27-9538-f60d604596ee
+Передаваемые данные:
+{"FilialId":1,"DealTypeId":600,"ClientPhone":"76666666666","Utm_source":"null","Utm_medium":"null","Utm_campaign":"null","Utm_term":"null","Utm_content":"null","Utm_device_type":"null","Utm_position_type":"null","Utm_region_name":"null","RefUrl":"https:\/\/ca60113-wordpress-jxdvd.tw1.ru\/","AdvertClientId_1":"null","AdvertClientId_2":"null","Fields":[{"Key":"Телефон","Value":"76666666666"}],"Source":"topmca.ru","SessionId":"null"}
+Результат: {"state":"1", "error":"", "data":"134057"} 
+
+

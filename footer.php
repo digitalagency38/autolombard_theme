@@ -138,16 +138,31 @@ $politic = get_option('politic');
     </div>
     <script src="<?php echo get_theme_file_uri(); ?>/dist/js/app.min.js?_v=20230303214427"></script>
     <script src="<?php echo get_theme_file_uri(); ?>/js/jquery.responsiveTabs.min.js?_v=20230303214427"></script>
+    <script src="<?php echo get_theme_file_uri(); ?>/js/form.js?_v=20230303214427"></script>
     <script src="<?php echo get_theme_file_uri(); ?>/js/main_dop.js?_v=20230303214427"></script>
 <div class="modal" data-modal="2">
     <div class="modal__in">
         <div class="modal__closer"></div>
-		<div class="modal__title">Подать документы на оформление <span>займа</span> под <span>залог авто</span></div>
-		<?php echo do_shortcode('[contact-form-7 id="869" title="Форма в подвале"]')?>
-		<div class="modal-body isSent">
-			<h2><span>Спасибо</span>, <br> ваша заявка получена.</h2>
-			<p>Мы свяжемся с вами в рабочее время</p>
-		</div>
+		<form class="feedback__form" action="/callback/" method="POST" name="">
+			<div class="modal__title">Подать документы на оформление <span>займа</span> под <span>залог авто</span></div>
+			<input type="hidden" name="subject" value="Получить займ">
+			<input class="feedback__input" type="name" placeholder="Ваше имя" name="name" required="required">
+			<input class="feedback__input" type="tel" placeholder="+7 (___) ___-__-__" name="tel" required="required">
+			<input id="check-37" name="check" type="hidden" value="" />
+			<input class="global_btn feedback__submit js_submit" type="submit" onclick="document.getElementById('check-34').value = 'stopSpam';" value="Получить займ">
+			<input type="hidden" name="UTM_SOURCE" value="">
+			<input type="hidden" name="UTM_MEDIUM" value="">
+			<input type="hidden" name="UTM_CAMPAIGN" value="">
+			<input type="hidden" name="UTM_TERM" value="">
+			<input type="hidden" name="UTM_CONTENT" value="">
+			<input type="hidden" name="affiliate_id">
+			<input type="hidden" name="source">
+			<input type="hidden" name="transaction_id">
+			<div class="modal-body isSent">
+				<h2><span>Спасибо</span>, <br> ваша заявка получена.</h2>
+				<p>Мы свяжемся с вами в рабочее время</p>
+			</div>
+		</form>
     </div>
 </div>
  <?php wp_footer();?>

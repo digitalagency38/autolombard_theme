@@ -2202,6 +2202,7 @@ p:last-child {
   display: block;
   text-decoration: none;
   font-style: normal;
+	cursor: pointer;
   font-weight: 600;
   font-size: 18px;
   line-height: 140%;
@@ -2252,11 +2253,15 @@ p:last-child {
 }
 
 .block_first__r-side {
-  width: 55%;
+/*   width: 55%; */
+	width: 47%;
   position: absolute;
   z-index: 2;
   right: -80px;
-  top: -50px;
+/*   top: -50px; */
+	height: 430px;
+    margin-top: -215px;
+	top: 50%;
 }
 
 .block_first__h1 {
@@ -2923,7 +2928,7 @@ p:last-child {
 
 @media all and (max-width: 1420px) {
   .block_first__r-side {
-    top: 0;
+/*     top: 0; */
   }
 
   .block_first__block {
@@ -3158,6 +3163,9 @@ p:last-child {
     position: relative;
     bottom: unset;
     right: unset;
+	  top: unset;
+	  margin-top: unset;
+	  height: auto;
   }
 
   .block_first__r-side img {
@@ -3166,7 +3174,7 @@ p:last-child {
   }
 
   .block_first__h1 {
-    font-size: 36px;
+    font-size: 30px;
     margin-bottom: 30px;
   }
 

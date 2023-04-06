@@ -48,13 +48,22 @@
                 <div class="block_distance__title"><?php echo $block_distance['title']; ?></div>
                 <div class="block_distance__text"><?php echo $block_distance['text']; ?></div>
             </div>
-            <div class="block_distance__r-side">
+            <a href="<?php echo $block_distance['link']; ?>" target="_blank" class="block_distance__r-side">
                 <img src="<?php echo $block_distance['img']; ?>" alt="">
-            </div>
+            </a>
         </div>
         <div class="glide dist-glide-js">
             <div data-glide-el="track" class="glide__track">
                 <div class="block_distance__blocks">
+					<div class="block_distance__item">
+						<div class="block_distance__icon">
+							<img src="<?php echo $block_distance['icon']; ?>" alt="">
+						</div>
+						<div class="block_distance__tit"><?php echo $block_distance['tit']; ?></div>
+						<div class="block_distance__txt"><?php echo $block_distance['subtitle']; ?></div>
+						<a href="tel:<?php echo $block_distance['tel']; ?>" class="block_steps__tel"><?php echo $block_distance['tel']; ?></a>
+						<div data-modal-id="1" class="block_steps__link">Оставить заявку</div>
+					</div>
                   <?php $list13 = ($block_distance['pref']); ?>
                     <?php if (is_array($list13)) {
                         foreach ($list13 as $e) { ?>
@@ -83,8 +92,22 @@
 <?php $block_form = get_field( 'block_form' );?>
 <div class="block_form center_block">
     <div class="block_form__l-side">
-        <div class="block_form__title"><?php echo $block_form['title']; ?></div>
-		<?php echo do_shortcode('[contact-form-7 id="137" title="Форма с телефоном кнопка Получить займ"]')?>
+        <div class="block_form__title"><?php echo $block_form['title']; ?></div>    
+		<form class="feedback__form" action="/callback/" method="POST" name="">
+			<input type="hidden" name="subject" value="Получить займ">
+			<input class="feedback__input" type="tel" placeholder="+7 (___) ___-__-__" name="tel" required="required">
+			<input id="check-351" name="check" type="hidden" value="" />
+			<input class="global_btn feedback__submit js_submit" type="submit" value="Получить займ" onclick="document.getElementById('check-351').value = 'stopSpam';">
+			<input type="hidden" name="UTM_SOURCE" value="">
+			<input type="hidden" name="UTM_MEDIUM" value="">
+			<input type="hidden" name="UTM_CAMPAIGN" value="">
+			<input type="hidden" name="UTM_TERM" value="">
+			<input type="hidden" name="UTM_CONTENT" value="">
+			<input type="hidden" name="affiliate_id">
+			<input type="hidden" name="source">
+			<input type="hidden" name="transaction_id">
+			<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
+		</form>
     </div>
     <div class="block_form__r-side">
         <img src="<?php echo $block_form['img']; ?>" alt="">
