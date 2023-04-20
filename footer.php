@@ -62,10 +62,10 @@ $politic = get_option('politic');
                 <a href="tel:<?= $site_tel; ?>"><?= $site_tel; ?></a>
                 <div>Телефон в Москве</div>
             </div>
-            <div class="footer__tel">
-                <a href="tel:<?= $site_tel2; ?>"><?= $site_tel2; ?></a>
+<!--             <div class="footer__tel">
+                <a href="tel:<//?= $site_tel2; ?>"><//?= $site_tel2; ?></a>
                 <div>Телефон в Санкт-Петербурге</div>
-            </div>
+            </div> -->
             <div class="footer__soc">
                 <a href="<?= $link_wts; ?>" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,6 +140,178 @@ $politic = get_option('politic');
     <script src="<?php echo get_theme_file_uri(); ?>/js/jquery.responsiveTabs.min.js?_v=20230303214427"></script>
     <script src="<?php echo get_theme_file_uri(); ?>/js/form.js?_v=20230303214427"></script>
     <script src="<?php echo get_theme_file_uri(); ?>/js/main_dop.js?_v=20230303214427"></script>
+	
+
+	
+	
+
+<div class="messanger">
+    <div class="messanger__img"></div>
+    <ul class="messanger__list">
+		<li class="messanger__item messanger__item_telegram">
+            <a href="<?= $link_tg; ?>" class="messanger__link" target="_blank">Начать диалог</a>
+        </li>
+
+        <li class="messanger__item messanger__item_whatsapp">
+            <a href="<?= $link_wts; ?>" class="messanger__link walinkadd" target="_blank">Начать диалог</a>
+        </li>
+        <li class="messanger__item messanger__item_route">
+            <button class="messanger__link messanger__link_route">Проложить маршрут</button>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="route">
+    <div class="route-tabs">
+        <span class="route__caption">Проложить маршрут</span>
+        <div class="route-tabs__inner">
+                <span class="route__tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><linearGradient id="vfw4a" x1="-29.14" x2="-29.08" y1="35.19" y2="35.25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fc0"/><stop offset="1" stop-color="#ffe992"/></linearGradient></defs><g><g><g><g><g><g><g><path fill="url(#vfw4a)" d="M24 0L0 9.753l10.502 3.75L14.252 24z"/></g><g><path fill="#fc0" d="M24 0L10.126 13.878 14.252 24z"/></g><g><path fill="#eca704" d="M9.753 14.253l4.5 9.747-1.505-12.749L0 9.753z"/></g></g></g></g></g></g></g></svg>
+                    Яндекс навигатор
+                </span>
+            <span class="route__tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><g><path fill="#fff" d="M0 24V0h24v24z"/></g><g><path fill="#f33" d="M14.664 7.592a3.076 3.076 0 0 1-3.072 3.072 3.076 3.076 0 0 1-3.073-3.072 3.076 3.076 0 0 1 3.073-3.073 3.076 3.076 0 0 1 3.072 3.073zm-2.521 7.591s-1.07 6.123-1.396 8.817c7.025-9.75 7.65-13.004 7.84-13.454a7.553 7.553 0 0 0 .596-2.954 7.554 7.554 0 0 0-2.223-5.368A7.647 7.647 0 0 0 14.546.596 7.553 7.553 0 0 0 11.592 0a7.554 7.554 0 0 0-5.368 2.224 7.646 7.646 0 0 0-1.627 2.413A7.553 7.553 0 0 0 4 7.592a7.554 7.554 0 0 0 2.224 5.368 7.646 7.646 0 0 0 2.413 1.626 7.553 7.553 0 0 0 2.955.597h.551z"/></g></g></svg>
+                    Яндекс Карты
+                </span>
+            <span class="route__tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><g><path fill="#fff" d="M0 24V0h24v24z"/></g><g><g><path fill="#1a73e8" d="M14.902.388A8.408 8.408 0 0 0 12.372 0 8.362 8.362 0 0 0 5.96 2.989l3.955 3.325z"/></g><g><path fill="#ea4335" d="M5.96 2.989a8.343 8.343 0 0 0-1.961 5.38c0 1.573.312 2.852.829 3.993l5.087-6.048z"/></g><g><path fill="#4285f4" d="M12.373 5.172a3.204 3.204 0 0 1 2.444 5.272L19.8 4.52A8.376 8.376 0 0 0 14.897.393L9.92 6.32a3.192 3.192 0 0 1 2.454-1.147"/></g><g><path fill="#fbbc04" d="M12.373 11.576A3.204 3.204 0 0 1 9.17 8.374a3.173 3.173 0 0 1 .748-2.055l-5.091 6.048c.871 1.928 2.316 3.477 3.803 5.428l6.186-7.351a3.198 3.198 0 0 1-2.444 1.132"/></g><g><path fill="#34a853" d="M14.694 19.799c2.794-4.367 6.048-6.352 6.048-11.43a8.335 8.335 0 0 0-.942-3.86L8.636 17.795c.473.62.952 1.279 1.416 2.008C11.748 22.427 11.279 24 12.372 24c1.095 0 .626-1.577 2.322-4.201"/></g></g></g></svg>
+                    Google Карты
+                </span>
+            <span class="route__tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><linearGradient id="7zz0b" x1="12.34" x2="12.54" y1="20.83" y2="2.38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#125ba8"/><stop offset="1" stop-color="#10b6e1"/></linearGradient><linearGradient id="7zz0d" x1="12.34" x2="12.54" y1="20.83" y2="2.38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#125ba8"/><stop offset="1" stop-color="#10b6e1"/></linearGradient><clipPath id="7zz0a"><path d="M0 12C0 5.373 5.373 0 12 0s12 5.373 12 12-5.373 12-12 12S0 18.627 0 12z"/></clipPath><clipPath id="7zz0c"><path d="M6.43 8.374c0 1.167.209 2.603.503 3.608h.858c3.853.308 3.72 4.539 3.72 8.846 0-.012.578-.053.876-.1 0-4.29.017-8.363 3.728-8.746h.875c.294-1.005.507-2.441.507-3.608 0-3.021-2.505-5.51-5.535-5.51-3.03 0-5.531 2.489-5.531 5.51z"/></clipPath></defs><g><g><g><path fill="#fff" d="M0 12C0 5.373 5.373 0 12 0s12 5.373 12 12-5.373 12-12 12S0 18.627 0 12z"/></g><g clip-path="url(#7zz0a)"><g><path fill="#fff" d="M11.832 24.11c-6.627 0-12-5.373-12-12v-.253c0-6.628 5.373-12 12-12h.253c6.628 0 12 5.372 12 12v.252c0 6.628-5.372 12-12 12z"/></g><g><path fill="#ffc715" d="M3.525 3.317c.96.206 17.387 2.976 20.56 3.51V2.89a3.033 3.033 0 0 0-3.032-3.032H2.865c-.793 0-1.513.307-2.053.806.494 1.778 1.246 2.341 2.713 2.654"/></g><g><path fill="#4dad30" d="M5.268 22.103l14.368-2.962s4.433-.842 4.433-5.494c0-3.11.01-4.642.016-5.321v-.47L1.567 4.055z"/></g><g><path fill="#4dad30" d="M3.93 20.447C3.88 20.158 1.278 7.717.04 1.796c-.132.34-.207.707-.207 1.094v18.187c0 .762.283 1.456.747 1.988.631-.137 1.237-.265 1.737-.366 1.493-.298 1.691-1.809 1.614-2.252"/></g><g><path fill="#66ba43" d="M1.571 23.817c.393.186.83.292 1.294.292h1.812l-.17-.866z"/></g><g><path fill="#66ba43" d="M20.329 20.032L5.466 23.043l.213 1.066h15.374a3.032 3.032 0 0 0 3.032-3.032v-3.752c-1.24 2.227-3.756 2.707-3.756 2.707"/></g><g><path fill="#fff" d="M10.491 21.484v-1.048c.002-4.823-.336-7.258-2.642-7.472H6.133l-.25-.778c-.498-1.816-.493-2.59-.488-3.486l.001-.295c0-3.6 2.937-6.53 6.547-6.53 3.58 0 6.497 2.88 6.545 6.44.053.427.132 1.754-.492 3.89l-.258.759h-1.703c-2.258.271-2.633 2.742-2.633 7.616v.44z"/></g><g><g><g><path fill="url(#7zz0b)" d="M6.43 8.374c0 1.167.209 2.603.503 3.608h.858c3.853.308 3.72 4.539 3.72 8.846 0-.012.578-.053.876-.1 0-4.29.017-8.363 3.728-8.746h.875c.294-1.005.507-2.441.507-3.608 0-3.021-2.505-5.51-5.535-5.51-3.03 0-5.531 2.489-5.531 5.51z"/></g><g clip-path="url(#7zz0c)"><path fill="url(#7zz0d)" d="M6.43 20.828V2.864h11.067v17.964z"/></g></g></g></g></g></g></svg>
+                    2GIS
+                </span>
+            <span class="route__tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><clipPath id="4gf9a"><path d="M0 12C0 5.373 5.373 0 12 0s12 5.373 12 12-5.373 12-12 12S0 18.627 0 12z"/></clipPath></defs><g><g><g><path fill="#fff" d="M0 12C0 5.373 5.373 0 12 0s12 5.373 12 12-5.373 12-12 12S0 18.627 0 12z"/></g><g clip-path="url(#4gf9a)"><g><path fill="#fefefe" d="M-.193 24.193V12h12.192v12.193z"/></g><g><path d="M12 24.193V12h12.192v12.193z"/></g><g><path fill="#fedc32" d="M-.193 12V-.193h24.385V12z"/></g></g></g></g></svg>
+                    Яндекс Такси
+                </span>
+        </div>
+        <button class="btn__route">Назад</button>
+    </div>
+
+    <div class="route-content">
+        <!-- YaNavigator -->
+        <div class="route-item">
+            <span class="route-item__caption">Яндекс навигатор</span>
+            <button class="route-item__btn"></button>
+            <div class="route-item__inner">
+                <a class="route__address" href="yandexnavi://build_route_on_map?lat_to=55.905396&lon_to=37.384810">
+                    ул. Соколова-Мещерская д. 29
+                </a>
+                <a class="route__address" href="yandexnavi://build_route_on_map?lat_to=55.757328&lon_to=37.534397">
+                    ул. Антонова-Овсеенко д.15
+                </a>
+                <a class="route__address" href="yandexnavi://build_route_on_map?lat_to=55.600125&lon_to=37.600882">
+                    ул. Кировоградская д.23А
+                </a>
+				<a class="route__address" href="yandexnavi://build_route_on_map?lat_to=55.726036&lon_to=37.756030">
+                    Рязанский проспект, 8Ас14
+                </a>
+				<a class="route__address" href="yandexnavi://build_route_on_map?lat_to=55.888821&lon_to=37.632619">
+                   проезд Чермянский, д. 7
+                </a>
+            </div>
+            <button class="btn__route">Закрыть</button>
+        </div>
+        <!-- YaMaps -->
+        <div class="route-item">
+            <span class="route-item__caption">Яндекс Карты</span>
+            <button class="route-item__btn"></button>
+            <div class="route-item__inner">
+                <a class="route__address" href="https://yandex.ru/maps/?ll=37.384810,55.905396&z=16&l=map&rtext=~55.905396,37.384810&rtt=auto" target="_blank">
+                    ул. Соколова-Мещерская д. 29
+                </a>
+                <a class="route__address" href="https://yandex.ru/maps/?ll=37.534397,55.757328&z=16&l=map&rtext=~55.757328,37.534397&rtt=auto" target="_blank">
+                    ул. Антонова-Овсеенко д.15
+                </a>
+                <a class="route__address" href="https://yandex.ru/maps/?ll=37.600882,55.600125&z=16&l=map&rtext=~55.600125,37.600882&rtt=auto" target="_blank">
+                    ул. Кировоградская д.23А
+                </a>
+				<a class="route__address" href="https://yandex.ru/maps/?ll=37.756030,55.726036&z=16&l=map&rtext=~55.726036,37.756030&rtt=auto" target="_blank">
+                    Рязанский проспект, 8Ас14
+                </a>
+				<a class="route__address" href="https://yandex.ru/maps/?ll=37.632619,55.888821&z=16&l=map&rtext=~55.888821,37.632619&rtt=auto">
+                   проезд Чермянский, д. 7
+                </a>
+            </div>
+            <button class="btn__route">Закрыть</button>
+        </div>
+        <!-- GMaps -->
+        <div class="route-item">
+            <span class="route-item__caption">Google Карты</span>
+            <button class="route-item__btn"></button>
+            <div class="route-item__inner">
+                <a class="route__address" href="https://www.google.com/maps?daddr=55.905396,37.384810" target="_blank">
+                    ул. Соколова-Мещерская д. 29
+                </a>
+                <a class="route__address" href="https://www.google.com/maps?daddr=55.757328,37.534397" target="_blank">
+                    ул. Антонова-Овсеенко д.15
+                </a>
+                <a class="route__address" href="https://www.google.com/maps?daddr=55.600125,37.600882" target="_blank">
+                    ул. Кировоградская д.23А
+                </a>
+				<a class="route__address" href="https://www.google.com/maps?daddr=55.726036,37.756030" target="_blank">
+                    Рязанский проспект, 8Ас14
+                </a>
+				<a class="route__address" href="https://www.google.com/maps?daddr=55.888821, 37.632619">
+                   проезд Чермянский, д. 7
+                </a>
+            </div>
+            <button class="btn__route">Закрыть</button>
+        </div>
+        <!-- 2GIS -->
+        <div class="route-item">
+            <span class="route-item__caption">2GIS</span>
+            <button class="route-item__btn"></button>
+            <div class="route-item__inner">
+                <a class="route__address" href="dgis://2gis.ru/routeSearch/rsType/car/to/37.384810,55.905396">
+                    ул. Соколова-Мещерская д. 29
+                </a>
+                <a class="route__address" href="dgis://2gis.ru/routeSearch/rsType/car/to/37.534397,55.757328">
+                    ул. Антонова-Овсеенко д.15
+                </a>
+                <a class="route__address" href="dgis://2gis.ru/routeSearch/rsType/car/to/37.600882,55.600125">
+                    ул. Кировоградская д.23А
+                </a>
+				<a class="route__address" href="dgis://2gis.ru/routeSearch/rsType/car/to/37.756030,55.726036">
+                    Рязанский проспект, 8Ас14
+                </a>
+				<a class="route__address" href="dgis://2gis.ru/routeSearch/rsType/car/to/37.632619,55.888821">
+                   проезд Чермянский, д. 7
+                </a>
+            </div>
+            <button class="btn__route">Закрыть</button>
+        </div>
+        <!-- YaTaxi -->
+        <div class="route-item">
+            <span class="route-item__caption">Яндекс Такси</span>
+            <button class="route-item__btn"></button>
+            <div class="route-item__inner">
+                <a class="route__address" href="https://3.redirect.appmetrica.yandex.com/route?&end-lat=55.905396&end-lon=37.384810&ref=mos-capitalru&appmetrica_tracking_id=1178268795219780156" target="_blank">
+                    ул. Соколова-Мещерская д. 29
+                </a>
+                <a class="route__address" href="https://3.redirect.appmetrica.yandex.com/route?&end-lat=55.757328&end-lon=37.534397&ref=mos-capitalru&appmetrica_tracking_id=1178268795219780156" target="_blank">
+                    ул. Антонова-Овсеенко д.15
+                </a>
+                <a class="route__address" href="https://3.redirect.appmetrica.yandex.com/route?&end-lat=55.600125&end-lon=37.600882&ref=mos-capitalru&appmetrica_tracking_id=1178268795219780156" target="_blank">
+                    ул. Кировоградская д.23А
+                </a>
+				<a class="route__address" href="https://3.redirect.appmetrica.yandex.com/route?&end-lat=55.726036&end-lon=37.756030&ref=mos-capitalru&appmetrica_tracking_id=1178268795219780156" target="_blank">
+                    Рязанский проспект, 8Ас14
+                </a>
+				<a class="route__address" href="https://3.redirect.appmetrica.yandex.com/route?&end-lat=55.888821&end-lon=37.632619" target="_blank">
+                   проезд Чермянский, д. 7
+                </a>
+            </div>
+            <button class="btn__route">Закрыть</button>
+        </div>
+    </div>	
+	</div>
+	
+	
+	
 <div class="modal" data-modal="2">
     <div class="modal__in">
         <div class="modal__closer"></div>
@@ -159,8 +331,7 @@ $politic = get_option('politic');
 			<input type="hidden" name="source">
 			<input type="hidden" name="transaction_id">
 			<div class="modal-body isSent">
-				<h2><span>Спасибо</span>, <br> ваша заявка получена.</h2>
-				<p>Мы свяжемся с вами в рабочее время</p>
+				<h2><span>Спасибо</span>, мы получили вашу заявку. Позвоним через 3 минуты!</h2>
 			</div>
 		</form>
     </div>

@@ -21,6 +21,7 @@ get_header();
 ?>
 <div class="center_block">
 	<?php $block_main = get_field( 'block_main' );?>	
+	<?php if ($block_main['title']): ?>
 	<div class="block_main">
 		<div class="block_main__l-side">
 			<h1 class="block_main__h1"><?php echo $block_main['title']; ?><a href="#map_block" class="block_h1_span">в 5 офисах</a></h1>
@@ -46,7 +47,7 @@ get_header();
 					<input type="hidden" name="affiliate_id">
 					<input type="hidden" name="source">
 					<input type="hidden" name="transaction_id">
-					<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
+					<div class="block_main__sending">Спасибо! Мы получили вашу заявку. Позвоним через 3 минуты!</div>
 				</form>
 			</div>
 		</div>
@@ -54,13 +55,14 @@ get_header();
 			<img src="<?php echo $block_main['img']; ?>" alt="">
 		</div>
 	</div>
+	<?php endif ?>
 	<div class="block_calc">
 		<div class="block_calc__item">
 			<div class="block_calc__title"></div>
 			<div class="block_calc__block">
 				<div class="calc__wrap calc_pts">
 					<div class="calc_borrow_step_1">
-						<h2>Рассчитайте ежемесячный платёж</h2>
+						<div class="title_calc">Рассчитайте ежемесячный платёж</div>
 						<div class="calc_items">
 							<div class="calc_item">
 								<div class="calc_item_wrap">
@@ -135,7 +137,7 @@ get_header();
 								<input type="hidden" name="affiliate_id">
 								<input type="hidden" name="source">
 								<input type="hidden" name="transaction_id">
-								<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
+								<div class="block_main__sending">Спасибо! Мы получили вашу заявку. Позвоним через 3 минуты!</div>
 							</form>
 						</div>
 					</div>
@@ -144,6 +146,7 @@ get_header();
 		</div>
 	</div>
 	<?php $block_steps = get_field( 'block_steps' );?>	
+	<?php if ($block_steps['title']): ?>
 	<div class="block_steps">
 		<div class="block_steps__title"><?php echo $block_steps['title']; ?></div>
 		<div class="glide step-glide-js">
@@ -182,8 +185,10 @@ get_header();
 			</div>
 		</div>
 	</div>
+	<?php endif ?>
 </div>  
 <?php $block_services = get_field( 'block_services' );?>
+<?php if ($block_services['title']): ?>
 <div class="block_services">
     <div class="block_services__item center_block">
         <div class="block_services__title"><?php echo $block_services['title']; ?></div>
@@ -253,15 +258,17 @@ get_header();
 						<input type="hidden" name="affiliate_id">
 						<input type="hidden" name="source">
 						<input type="hidden" name="transaction_id">
-						<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
+						<div class="block_main__sending">Спасибо! Мы получили вашу заявку. Позвоним через 3 минуты!</div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<?php endif ?>
 <div class="center_block">
 <?php $block_tabs = get_field( 'block_tabs' );?>
+	<?php if ($block_tabs['title']): ?>
 	<div class="block_tabs">
 		<div class="block_tabs__title"><?php echo $block_tabs['title']; ?></div>
 		<div class="block_tabs__tabs" id="responsiveTabsDemo">
@@ -293,82 +300,88 @@ get_header();
 			<?php } ?>
 		</div>
 	</div>
+<?php endif ?>
 <?php $block_time = get_field( 'block_time' );?>
-	<div class="block_time">
-		<div class="block_time__item">
-			<div class="block_time__top">
-				<div class="block_time__l-side">
-					<div class="block_time__title"><?php echo $block_time['title']; ?></div>
-					<div class="block_time__text"><?php echo $block_time['text']; ?></div>
-					<div data-modal-id="1" class="block_time__link">Подать документы</div>
-				</div>
-				<div class="block_time__r-side">
-					<div class="times_block">
-						<div class="times_block__logo"><img src="<?php echo $block_time['img']; ?>" alt=""></div>
-						<div class="times_block__text">Онлайн оформление</div>
-						<div data-modal-id="1" class="times_block__button">Оформить</div>
+	<?php if ($block_time['title']): ?>
+		<div class="block_time">
+			<div class="block_time__item">
+				<div class="block_time__top">
+					<div class="block_time__l-side">
+						<div class="block_time__title"><?php echo $block_time['title']; ?></div>
+						<div class="block_time__text"><?php echo $block_time['text']; ?></div>
+						<div data-modal-id="1" class="block_time__link">Подать документы</div>
+					</div>
+					<div class="block_time__r-side">
+						<div class="times_block">
+							<div class="times_block__logo"><img src="<?php echo $block_time['img']; ?>" alt=""></div>
+							<div class="times_block__text">Онлайн оформление</div>
+							<div data-modal-id="1" class="times_block__button">Оформить</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="block_time__blocks">
-				<?php $list4 = ($block_time['pref']); ?>
-				<?php if (is_array($list4)) {
-					foreach ($list4 as $e) { ?>
-						<div class="block_time__block">
-							<div class="block_time__tit"><?php echo $e['title']; ?></div>
-							<div class="block_time__txt"><?php echo $e['text']; ?></div>
-						</div>
-					<?php } ?>
-				<?php } ?>
-			</div>
-		</div>
-	</div>
-</div>
-<?php $block_prev = get_field( 'block_prev' );?>
-<div class="block_prev">
-    <div class="block_prev__item center_block">
-        <div class="block_prev__title"><?php echo $block_prev['title']; ?></div>
-        <div class="block_prev__blocks ps_block">
-			<?php $list5 = ($block_prev['pref']); ?>
-			<?php if (is_array($list5)) {
-				foreach ($list5 as $e) { ?>
-					<div class="block_prev__block">
-						<div class="block_prev__icon">
-							<img src="<?php echo $e['icon']; ?>" alt="">
-						</div>
-						<div class="block_prev__tit"><?php echo $e['title']; ?></div>
-						<div class="block_prev__text"><?php echo $e['text']; ?></div>
-					</div>
-				<?php } ?>
-			<?php } ?>
-        </div>
-        <div class="glide dist-glide-js mobs_block">
-            <div data-glide-el="track" class="glide__track">
-                <div class="block_prev__blocks">
-					<?php if (is_array($list5)) {
-						foreach ($list5 as $e) { ?>
-							<div class="block_prev__block">
-								<div class="block_prev__icon">
-									<img src="<?php echo $e['icon']; ?>" alt="">
-								</div>
-								<div class="block_prev__tit"><?php echo $e['title']; ?></div>
-								<div class="block_prev__text"><?php echo $e['text']; ?></div>
+				<div class="block_time__blocks">
+					<?php $list4 = ($block_time['pref']); ?>
+					<?php if (is_array($list4)) {
+						foreach ($list4 as $e) { ?>
+							<div class="block_time__block">
+								<div class="block_time__tit"><?php echo $e['title']; ?></div>
+								<div class="block_time__txt"><?php echo $e['text']; ?></div>
 							</div>
 						<?php } ?>
 					<?php } ?>
-                </div>
-            </div>
-            <div class="glide__bullets" data-glide-el="controls[nav]">
+				</div>
+			</div>
+		</div>
+	<?php endif ?>
+</div>
+<?php $block_prev = get_field( 'block_prev' );?>
+<?php if ($block_prev['title']): ?>
+	<div class="block_prev">
+		<div class="block_prev__item center_block">
+			<div class="block_prev__title"><?php echo $block_prev['title']; ?></div>
+			<div class="block_prev__blocks ps_block">
+				<?php $list5 = ($block_prev['pref']); ?>
 				<?php if (is_array($list5)) {
-					foreach ($list5 as $key => $e) { ?>
-                		<button class="glide__bullet" data-glide-dir="=<?php echo $key; ?>"><?php echo $key; ?></button>
+					foreach ($list5 as $e) { ?>
+						<div class="block_prev__block">
+							<div class="block_prev__icon">
+								<img src="<?php echo $e['icon']; ?>" alt="">
+							</div>
+							<div class="block_prev__tit"><?php echo $e['title']; ?></div>
+							<div class="block_prev__text"><?php echo $e['text']; ?></div>
+						</div>
 					<?php } ?>
 				<?php } ?>
-            </div>
-        </div>
-    </div>
-</div>
+			</div>
+			<div class="glide dist-glide-js mobs_block">
+				<div data-glide-el="track" class="glide__track">
+					<div class="block_prev__blocks">
+						<?php if (is_array($list5)) {
+							foreach ($list5 as $e) { ?>
+								<div class="block_prev__block">
+									<div class="block_prev__icon">
+										<img src="<?php echo $e['icon']; ?>" alt="">
+									</div>
+									<div class="block_prev__tit"><?php echo $e['title']; ?></div>
+									<div class="block_prev__text"><?php echo $e['text']; ?></div>
+								</div>
+							<?php } ?>
+						<?php } ?>
+					</div>
+				</div>
+				<div class="glide__bullets" data-glide-el="controls[nav]">
+					<?php if (is_array($list5)) {
+						foreach ($list5 as $key => $e) { ?>
+							<button class="glide__bullet" data-glide-dir="=<?php echo $key; ?>"><?php echo $key; ?></button>
+						<?php } ?>
+					<?php } ?>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php endif ?>
 <?php $block_form = get_field( 'block_form' );?>
+<?php if ($block_form['title']): ?>
 <div class="block_form center_block">
     <div class="block_form__l-side">
         <div class="block_form__title"><?php echo $block_form['title']; ?></div>        
@@ -385,14 +398,16 @@ get_header();
 			<input type="hidden" name="affiliate_id">
 			<input type="hidden" name="source">
 			<input type="hidden" name="transaction_id">
-			<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
+			<div class="block_main__sending">Спасибо! Мы получили вашу заявку. Позвоним через 3 минуты!</div>
 		</form>
     </div>
     <div class="block_form__r-side">
         <img src="<?php echo $block_form['img']; ?>" alt="">
     </div>
 </div>
+<?php endif ?>
 <?php $block_auto = get_field( 'block_auto' );?>
+<?php if ($block_auto['title']): ?>
 <div class="block_auto">
     <div class="block_auto__item center_block">
         <div class="block_auto__title"><?php echo $block_auto['title']; ?></div>
@@ -427,7 +442,9 @@ get_header();
         </div>
     </div>
 </div>
+<?php endif ?>
 <?php $block_partners = get_field( 'block_partners' );?>
+<?php if ($block_partners['title']): ?>
 <div class="block_partners">
     <div class="block_partners__title center_block"><?php echo $block_partners['title']; ?></div>
 	<div class="block_partners__items">
@@ -449,7 +466,9 @@ get_header();
 		</div>
 	</div>
 </div>
+<?php endif ?>
 <?php $block_reviews = get_field( 'block_reviews' );?>
+<?php if ($block_reviews['title']): ?>
 <div class="block_reviews">
     <div class="block_reviews__item center_block">
         <div class="block_reviews__title"><?php echo $block_reviews['title']; ?></div>
@@ -521,8 +540,10 @@ get_header();
         </div>
     </div>
 </div>
+<?php endif ?>
 <div class="center_block">
 <?php $block_question = get_field( 'block_question' );?>
+	<?php if ($block_question['title']): ?>
 	<div class="block_question">
     	<div class="block_question__title"><?php echo $block_question['title']; ?></div>
 		<div class="block_question__blocks">
@@ -537,6 +558,7 @@ get_header();
 			<?php } ?>
 		</div>
 	</div>
+<?php endif ?>
 </div>
 <div class="block_map" id="map_block">
     <div class="block_map__items center_block">
@@ -559,10 +581,12 @@ get_header();
 </div>
 <div class="center_block">
 <?php $block_text = get_field( 'block_text' );?>
+	<?php if ($block_text['title']): ?>
 	<div class="block_text">
 		<div class="block_text__title"><?php echo $block_text['title']; ?></div>
 		<div class="block_text__text"><?php echo $block_text['text']; ?></div>
 	</div>
+<?php endif ?>
 </div>
 <div class="modal" data-modal="1">
     <div class="modal__in">
@@ -583,8 +607,7 @@ get_header();
 			<input type="hidden" name="source">
 			<input type="hidden" name="transaction_id">
 			<div class="modal-body isSent">
-				<h2><span>Спасибо</span>, <br> ваша заявка получена.</h2>
-				<p>Мы свяжемся с вами в рабочее время</p>
+				<h2><span>Спасибо</span>, мы получили вашу заявку. Позвоним через 3 минуты!</h2>
 			</div>
 		</form>
     </div>

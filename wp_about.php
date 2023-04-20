@@ -15,8 +15,9 @@
           }?>
     </div>
 </div>
-  <h1 class="title_h1"><?php echo get_the_title(); ?></h1>
+<h1 class="title_h1"><?php echo get_the_title(); ?></h1>
 <?php $info_block = get_field( 'info_block' );?>
+	<?php if ($info_block['title']): ?>
   <div class="info_block">
     <div class="info_block__img">
         <img src="<?php echo $info_block['img']; ?>" alt="">
@@ -39,8 +40,10 @@
         </div>
     </div>
 </div>
+	<?php endif ?>
 </div>
 <?php $block_distance = get_field( 'block_distance' );?>
+<?php if ($block_distance['title']): ?>
 <div class="block_distance">
     <div class="block_distance__center center_block">
         <div class="block_distance__info">
@@ -88,31 +91,34 @@
         </div>
     </div>
 </div>
+<?php endif ?>
 
 <?php $block_form = get_field( 'block_form' );?>
-<div class="block_form center_block">
-    <div class="block_form__l-side">
-        <div class="block_form__title"><?php echo $block_form['title']; ?></div>    
-		<form class="feedback__form" action="/callback/" method="POST" name="">
-			<input type="hidden" name="subject" value="Получить займ">
-			<input class="feedback__input" type="tel" placeholder="+7 (___) ___-__-__" name="tel" required="required">
-			<input id="check-351" name="check" type="hidden" value="" />
-			<input class="global_btn feedback__submit js_submit" type="submit" value="Получить займ" onclick="document.getElementById('check-351').value = 'stopSpam';">
-			<input type="hidden" name="UTM_SOURCE" value="">
-			<input type="hidden" name="UTM_MEDIUM" value="">
-			<input type="hidden" name="UTM_CAMPAIGN" value="">
-			<input type="hidden" name="UTM_TERM" value="">
-			<input type="hidden" name="UTM_CONTENT" value="">
-			<input type="hidden" name="affiliate_id">
-			<input type="hidden" name="source">
-			<input type="hidden" name="transaction_id">
-			<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
-		</form>
-    </div>
-    <div class="block_form__r-side">
-        <img src="<?php echo $block_form['img']; ?>" alt="">
-    </div>
-</div>
+<?php if ($block_form['title']): ?>
+	<div class="block_form center_block">
+		<div class="block_form__l-side">
+			<div class="block_form__title"><?php echo $block_form['title']; ?></div>    
+			<form class="feedback__form" action="/callback/" method="POST" name="">
+				<input type="hidden" name="subject" value="Получить займ">
+				<input class="feedback__input" type="tel" placeholder="+7 (___) ___-__-__" name="tel" required="required">
+				<input id="check-351" name="check" type="hidden" value="" />
+				<input class="global_btn feedback__submit js_submit" type="submit" value="Получить займ" onclick="document.getElementById('check-351').value = 'stopSpam';">
+				<input type="hidden" name="UTM_SOURCE" value="">
+				<input type="hidden" name="UTM_MEDIUM" value="">
+				<input type="hidden" name="UTM_CAMPAIGN" value="">
+				<input type="hidden" name="UTM_TERM" value="">
+				<input type="hidden" name="UTM_CONTENT" value="">
+				<input type="hidden" name="affiliate_id">
+				<input type="hidden" name="source">
+				<input type="hidden" name="transaction_id">
+				<div class="block_main__sending">Спасибо! Мы получили вашу заявку. Позвоним через 3 минуты!</div>
+			</form>
+		</div>
+		<div class="block_form__r-side">
+			<img src="<?php echo $block_form['img']; ?>" alt="">
+		</div>
+	</div>
+<?php endif ?>
 <?php
     get_footer();
 ?>

@@ -54,6 +54,41 @@ window.config = {
     }
 };
 $(document).ready(function(){
+	
+	
+	
+	route();
+    function route() {
+        $('.messanger__link_route').on('click', function() {
+            $('.route').addClass('active');
+            $('.route-tabs').addClass('active');
+        });
+
+        $('.btn__route').on('click', function() {
+            $('.route-item').removeClass('active')
+            $('.route-tabs').removeClass('active');
+            $('.route').removeClass('active');
+        });
+
+        $('.route__tab').on('click', function () {
+            $(this).parents('.route').find($('.route-item')).removeClass('active').eq($(this).index()).addClass('active');
+            $('.route-content').addClass('active');
+            $('.route-tabs').removeClass('active');
+        });
+
+        $('.route-item__btn').on('click', function() {
+            $(this).parents('.route-item').removeClass('active');
+            $('.route-tabs').addClass('active');
+        });
+    }
+	
+	
+	
+	
+	
+	
+	
+	
   $('#responsiveTabsDemo').responsiveTabs({
       startCollapsed: 'accordion'
   });

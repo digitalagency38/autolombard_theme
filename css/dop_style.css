@@ -910,6 +910,15 @@ b, strong {
 .block_first {
 	min-height: 470px;
 }
+.title_calc {
+	margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 140%;
+    color: #071a39;
+    margin-bottom: 40px;
+}
 @media all and (max-width: 1240px) {
 	.calc_bottom, .calc_items {
 		flex-direction: column;
@@ -932,6 +941,10 @@ b, strong {
 	}
 }
 @media all and (max-width: 1023px) {
+	.title_calc {
+		font-size: 32px;
+    	margin-bottom: 30px;
+	}
 	.calc_form .feedback__form {
 		flex-direction: column;
 	}

@@ -33,20 +33,22 @@
             </div>
         </div>
 </div>
-<div class="center_block">
 <?php $block_rekv = get_field( 'block_rekv' );?>
-    <div class="block_rekv">
-      <div class="block_rekv__title"><?php echo $block_rekv['title']; ?></div>
-      <div class="block_rekv__blocks">
-          <?php $list11 = ($block_rekv['pref']); ?>
-        	<?php if (is_array($list11)) {
-        		foreach ($list11 as $e) { ?>
-                  <div class="block_rekv__block"><?php echo $e['title']; ?></div>
-          	<?php } ?>
-          <?php } ?>
-      </div>
-  </div>
-</div>
+<?php if ($block_rekv['title']): ?>
+	<div class="center_block">
+		<div class="block_rekv">
+		  <div class="block_rekv__title"><?php echo $block_rekv['title']; ?></div>
+		  <div class="block_rekv__blocks">
+			  <?php $list11 = ($block_rekv['pref']); ?>
+				<?php if (is_array($list11)) {
+					foreach ($list11 as $e) { ?>
+					  <div class="block_rekv__block"><?php echo $e['title']; ?></div>
+				<?php } ?>
+			  <?php } ?>
+		  </div>
+	  </div>
+	</div>
+<?php endif ?>
 <?php
     get_footer();
 ?>

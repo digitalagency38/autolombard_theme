@@ -61,7 +61,7 @@
 			<div class="block_calc__block">
 				<div class="calc__wrap calc_pts">
 					<div class="calc_borrow_step_1">
-						<h2><?php echo $block_calc['title']; ?></h2>
+						<div class="title_calc"><?php echo $block_calc['title']; ?></div>
 						<div class="calc_items">
 							<div class="calc_item">
 								<div class="calc_item_wrap">
@@ -252,7 +252,7 @@
 					<input type="hidden" name="affiliate_id">
 					<input type="hidden" name="source">
 					<input type="hidden" name="transaction_id">
-					<div class="block_main__sending">Спасибо! Ваша заявка отправлена. <br> Мы свяжемся с вами в рабочее время</div>
+					<div class="block_main__sending">Спасибо! Мы получили вашу заявку. Позвоним через 3 минуты!</div>
 				</form>
 			</div>
 			<div class="block_tel__r-side">
@@ -449,6 +449,15 @@
 		</div>
 	</div>
 <?php endif ?>
+<?php $block_text = get_field( 'block_text' );?>
+<?php if ($block_text['title']): ?>
+	<div class="center_block">
+		<div class="block_text">
+			<div class="block_text__title"><?php echo $block_text['title']; ?></div>
+			<div class="block_text__text"><?php echo $block_text['text']; ?></div>
+		</div>
+	</div>
+<?php endif ?>
 <div class="block_map">
     <div class="block_map__items center_block">
         <div class="block_map__title">Наши офисы</div>
@@ -487,8 +496,7 @@
 			<input type="hidden" name="source">
 			<input type="hidden" name="transaction_id">
 			<div class="modal-body isSent">
-				<h2><span>Спасибо</span>, <br> ваша заявка получена.</h2>
-				<p>Мы свяжемся с вами в рабочее время</p>
+				<h2><span>Спасибо</span>! Мы получили вашу заявку. Позвоним через 3 минуты!</h2>
 			</div>
 		</form>
     </div>
