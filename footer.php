@@ -143,7 +143,7 @@ $politic = get_option('politic');
 	
 
 	
-	
+
 
 <div class="messanger">
     <div class="messanger__img"></div>
@@ -160,7 +160,6 @@ $politic = get_option('politic');
         </li>
     </ul>
 </div>
-
 
 
 <div class="route">
@@ -337,5 +336,11 @@ $politic = get_option('politic');
     </div>
 </div>
  <?php wp_footer();?>
+ <script>
+
+	
+
+</script>
+ 
 </body>
 </html>

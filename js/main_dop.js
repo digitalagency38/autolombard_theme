@@ -1,4 +1,25 @@
 $(function() {
+ 
+ window.setTimeout(function() {
+		
+		 const _ym_uid = document.cookie.split(';').map((i) => i.trim().split('=')).find((i) => i[0] === '_ym_uid');
+		 console.log(_ym_uid[1]);
+		 //const ym = <?php echo $_COOKIE['_ym_uid']; ?>;
+		 //gaId = gaId = ga.getAll()[0].get('clientId') ? ga.getAll()[0].get('clientId') : 'неизвестно';
+  		 var textID = '&text=Доброго дня! Обязательно отправьте это сообщение, и дождитесь ответа. Ваш номер: '+_ym_uid[1];
+        console.log(textID);
+        $('.walinkadd').each(function () {
+            var href = $(this).attr('href');
+            href = href+textID;
+            $(this).attr('href',href);
+        });
+
+}, 3000);
+
+});	
+
+
+$(function() {
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
 		// ga( 'send', 'event', 'Contact Form', 'submit' );
 		if (event.target.closest('.modal__in')) {

@@ -37,32 +37,32 @@ $link_tg = get_option('link_tg');
 	// Группы объектов
 		var groups = [
 				{
+					<?php $block_map = get_field( 'block_map' );?>
 					name: "Москва",
 					id: "moscow_map",
 					style: "islands#redIcon",
 					items: [
-						<?php $block_map = get_field( 'block_map' );?>
 						<?php if (is_array($block_map)) {
-							foreach ($block_map as $e) { ?>
-								{
-									center: [<?php echo $e['coor']; ?>],
-									name: "<?php echo $e['title']; ?>",
-									tel: "<?php echo $e['tel']; ?>",
-									work: "<?php echo $e['work']; ?>",
-									img: "<?php echo $e['img']; ?>",
-									img2: "<?php echo $e['img2']; ?>",
-									img3: "<?php echo $e['img3']; ?>"
-								},
-							<?php } ?>
+	foreach ($block_map as $e) { ?>
+						{
+							center: [<?php echo $e['coor']; ?>],
+							name: "<?php echo $e['title']; ?>",
+							tel: "<?php echo $e['tel']; ?>",
+							work: "<?php echo $e['work']; ?>",
+							img: "<?php echo $e['img']; ?>",
+							img2: "<?php echo $e['img2']; ?>",
+							img3: "<?php echo $e['img3']; ?>"
+						},
+						<?php } ?>
 						<?php } ?>
 					]
 				},
 				{
+					<?php $block_map2 = get_field( 'block_map2' );?>
 					name: "Санкт-Петербург",
 					id: "saint_map",
 					style: "islands#greenIcon",
 					items: [
-						<?php $block_map2 = get_field( 'block_map2' );?>
 						<?php if (is_array($block_map2)) {
 							foreach ($block_map2 as $e) { ?>
 								{
@@ -88,15 +88,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-K2LHK85');</script>
 <!-- End Google Tag Manager -->
-	<script>
-    (function(w, d, u, i, o, s, p) {
-        if (d.getElementById(i)) { return; } w['MangoObject'] = o;
-        w[o] = w[o] || function() { (w[o].q = w[o].q || []).push(arguments) }; w[o].u = u; w[o].t = 1 * new Date();
-        s = d.createElement('script'); s.async = 1; s.id = i; s.src = u;
-        p = d.getElementsByTagName('script')[0]; p.parentNode.insertBefore(s, p);
-    }(window, document, '//widgets.mango-office.ru/widgets/mango.js', 'mango-js', 'mgo'));
-    mgo({calltracking: {id: 29854, elements: [{"numberText":""}]}});
-</script>
 
 </head>
 <body>

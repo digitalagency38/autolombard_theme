@@ -66,6 +66,7 @@ if (!$roistat_visit){ $roistat_visit = 'nocookie'; }
 $ref = $_SERVER['HTTP_REFERER'];
 if (!$ref){ $ref = 'null'; }
 $ym_uid = $_COOKIE['_ym_uid'];
+if (!$ym_uid) $ym_uid = $_GET['_ym_uid'];
 if (!$ym_uid){ $ym_uid = 'null'; }
 $gid = substr($_COOKIE['_ga'],6);
 if (!$gid){ $gid = 'null'; }
@@ -118,22 +119,20 @@ $msg .= $text;
 $msg .= "</body></html>";
 
 $headers= "X-Mailer: PHP/" . phpversion()."\r\n";
-$headers .= "From:xxxx.press < info@xxxx.press>" . "\r\n";
+$headers .= "From:topmca.ru < info@topmca.ru>" . "\r\n";
 $headers .= "Reply-To: Автобайер Москва" . "\r\n";
 $headers.= "MIME-Version: 1.0" . "\r\n";
 $headers.= "Content-type: text/html; charset=utf-8\r\n";
 
 
-
+/*
 $to = 'ahtubafishing@yandex.ru';
 $subjeсtmail = 'заявка'; 
  
   if (mail( $to, $subjeсtmail, $msg, $headers)) {
-	  echo 'отправлено';
   } else {
-	  echo 'ошибка';
   }
-
+*/
 
 
 
@@ -199,17 +198,23 @@ file_put_contents( "debugcrm.txt", print_r($debresult, true) . PHP_EOL , FILE_AP
 
 $text = "*TOP MCA.* \n"."📞 ". 'Заявка на звонок. '.date('j.m.Y G:i') . "*" . "\n" . "Телефон: " . "*" . $phone. "*" . "\n" . "Имя: " . "*" . $name;
 
-$botparams=['chat_id'=>'-543623035', 'text'=>$text, 'parse_mode' => 'Markdown'];
+$botparams=['chat_id'=>'-967784317', 'text'=>$text, 'parse_mode' => 'Markdown'];
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot1638106619:AAFz-dKNLKQjya8gkcSx-m3mkRLbkPuGrz0/sendMessage");
+curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot6116867674:AAGCLiCYeZL-wVdlXJr7y-hAtaCpaYzyHOI/sendMessage");
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $botparams);
-curl_exec($ch);
+$data = curl_exec($ch);
 curl_close($ch);
+
+$debresult = "Телега: $data \n\n";
+file_put_contents( "debugcrm.txt", print_r($debresult, true) . PHP_EOL , FILE_APPEND);
 
 
 } else {
 	$deb = "прямой запрос. нет данных";
 file_put_contents( "debugcrm.txt", print_r($deb, true) . PHP_EOL , FILE_APPEND);
 }
+
+
+

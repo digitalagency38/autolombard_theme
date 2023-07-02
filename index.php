@@ -24,7 +24,7 @@ get_header();
 	<?php if ($block_main['title']): ?>
 	<div class="block_main">
 		<div class="block_main__l-side">
-			<h1 class="block_main__h1"><?php echo $block_main['title']; ?><a href="#map_block" class="block_h1_span">в 5 офисах</a></h1>
+			<h1 class="block_main__h1"><?php echo $block_main['title']; ?><a href="#map_block" class="block_h1_span"><?php echo $block_main['span']; ?></a></h1>
 			<div class="block_main__blocks">
 				<?php $pref = ($block_main['pref']); ?>
 				<?php if (is_array($pref)) {
@@ -541,6 +541,34 @@ get_header();
     </div>
 </div>
 <?php endif ?>
+<div class="block_stat">
+	<div class="block_stat__in center_block">
+	<?php
+		$post_type = 'post';
+		$count = 3; // Количество последних статей, которые вы хотите отобразить
+		$sale_list = get_posts([
+			'post_type' => $post_type,
+			'numberposts' => $count,
+		]);
+	?>
+		<div class="block_stat__top">
+			<div class="block_stat__title">Полезные статьи</div>
+			<a href="/poleznye-stati" class="block_stat__btn">Все статьи</a>
+		</div>
+		<div class="block_stat__blocks">
+			<?php foreach ($sale_list as $item): ?>
+				<div class="block_stat__block" itemid="<?php echo $item->ID?>">
+					<a href="<?php echo get_permalink($item) ?>" class="block_stat__img">
+						<img src="<?php echo get_the_post_thumbnail_url($item)?>" alt="">
+					</a>
+					<a href="<?php echo get_permalink($item) ?>" class="block_stat__tit"><?php echo $item->post_title?></a>
+					<a href="<?php echo get_permalink($item) ?>" class="block_stat__link">Подробнее</a>
+				</div>
+			<?php endforeach;?>
+		</div>
+		<a href="/poleznye-stati" class="block_stat__btn mob">Все статьи</a>
+	</div>
+</div>
 <div class="center_block">
 <?php $block_question = get_field( 'block_question' );?>
 	<?php if ($block_question['title']): ?>
@@ -568,8 +596,12 @@ get_header();
 				<div class="block_map__buttons">
 					<div class="block_map__fake">Москва</div>
             		<div class="block_map__more">
-						<div id="msk" class="block_map__button isActive">Москва</div>
-						<div id="spb" class="block_map__button">Санкт-Петербург</div>
+						<?php if (is_array($block_map)) {?>
+							<div id="msk" class="block_map__button isActive">Москва</div>
+						<?php } ?>
+						<?php if (is_array($block_map2)) {?>
+							<div id="spb" class="block_map__button">Санкт-Петербург</div>
+						<?php } ?>
 					</div>
 				</div>
             </div>
